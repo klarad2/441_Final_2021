@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import './main.html'
 import { Meteor } from 'meteor/meteor';
 import {USER_Posts_Access} from './../imports/api/user_posts.js';
-
-import { App } from '/imports/ui/App.js';
+import {USER_Comments_Access} from './../imports/api/user_comments.js';
+import { App } from './../imports/ui/App.js';
 
 Meteor.startup(() => {
 
-  Tracker.autorun(()  =>
+  Tracker.autorun(()  => {
 
-  let allPostsInDB = USER_Posts_Access.find({/*empty to get all posts */}), {sort:{votes: -1}}).fetch();
+  let allPostsInDB = USER_Posts_Access.find({/*empty to get all posts */}, {sort:{time: -1}});
+
+  let allCommentsInDB = USER_Comments_Access.find({/*empty to get all comments*/}, {sort:{time: -1}});
 
 
   //
@@ -20,7 +22,8 @@ Meteor.startup(() => {
     passedPropTitle={title}
     passedPropModerator={'Devin K'}
     passPropAllPost= {allPostsInDB}
+    passedPropAllComments={allCommentsInDB}
 
-  , document.getElementById('content'));
+  />, document.getElementById('content'));
   });
 });

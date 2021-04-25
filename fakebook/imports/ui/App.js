@@ -1,9 +1,11 @@
 import React from 'react';
-//test
 import PropTypes from 'prop-types';
 import TitleBar from './TitleBar.js';
 import AddPost from './AddPost.js';
 import TopicList from './PostList.js';
+import AddComment from './AddComment.js';
+import CommentList from './CommentList.js';
+
 
 
 export default class App extends React.Component {
