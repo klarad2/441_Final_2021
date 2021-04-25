@@ -1,7 +1,7 @@
 import React from 'react';
 import {USER_Posts_Access} from './../api/user_posts.js';
 import {USER_Comments_Access} from './../api/user_comments.js';
-import AddComment from './AddComment.js';
+
 import CommentList from './CommentList.js';
 import Comment from './RenderComment.js';
 

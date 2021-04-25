@@ -1,7 +1,7 @@
 import React from 'react';
 import {USER_Comments_Access} from './../api/user_comments.js';
 
-import PropTypes from 'prop-types';
+
 
 export default class AddComment extends React.Component{
 
@@ -11,7 +11,8 @@ export default class AddComment extends React.Component{
     if(newComment){
       even.target.formInputNameAttribute.value = '';//clear input box
       USER_Comment_Access.insert({
-        topic: newComment,
+        postid: '4',
+        commentInfo: comment,
         likes: 0,
         dislikes:0,
         time: new Date(),

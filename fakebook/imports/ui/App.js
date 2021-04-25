@@ -27,3 +27,9 @@ export default class App extends React.Component {
  }
 
 };
+
+App.propTypes = {
+  passedPropTitle: PropTypes.string.isRequired,
+  passedPropAllPosts: PropTypes.string.isRequired,
+  passedPropAllComments: PropTypes.string.isRequired
+};
