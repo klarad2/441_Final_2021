@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 export default class PostList extends React.Component {
   renderAllPosts(){
-    if (this.props.passed_posts.length === 0){
+    if (this.props.passed_posts.length == 0){
       return (
-        <div className = 'single-block-item-style'>
+
           <p className = 'single-block-item-style__message'>
               Add a new post to get started
           </p>
-        </div>
+      
       );
     } else {
       return this.props.passed_posts.map((post) => {

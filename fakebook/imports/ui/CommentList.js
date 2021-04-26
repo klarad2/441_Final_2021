@@ -1,5 +1,5 @@
 import React from 'react';
-import RenderPost from './RenderComment.js';
+import RenderComment from './RenderComment.js';
 import PropTypes from 'prop-types';
 
 export default class CommentList extends React.Component {
@@ -14,7 +14,7 @@ export default class CommentList extends React.Component {
       );
     } else {
       return this.props.passed_comments.map((comment) => {
-        return <Comment key={comment._id} comment_prop_obj={comment}/>
+        return <RenderComment key={comment._id} comment_prop_obj={comment}/>
       });
     }
 

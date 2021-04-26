@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TitleBar from './TitleBar.js';
 import AddPost from './AddPost.js';
-import TopicList from './PostList.js';
+import PostList from './PostList.js';
 import AddComment from './AddComment.js';
 import CommentList from './CommentList.js';
 
@@ -20,7 +20,7 @@ export default class App extends React.Component {
         <div className='wrapper'>
         <AddPost />
          <PostList passed_posts={this.props.passedPropAllPosts}/>
-
+          <CommentList passed_comments={this.props.passedPropAllComments}/>
        </div>
      </>
    )
@@ -30,6 +30,6 @@ export default class App extends React.Component {
 
 App.propTypes = {
   passedPropTitle: PropTypes.string.isRequired,
-  passedPropAllPosts: PropTypes.string.isRequired,
-  passedPropAllComments: PropTypes.string.isRequired
+  passedPropAllPosts: PropTypes.array.isRequired,
+  passedPropAllComments: PropTypes.array.isRequired
 };

@@ -14,7 +14,7 @@ export default class RenderComment extends React.Component{
 
                <h3 className='post__topic'>{this.props.comment_prop_obj.commentInfo}</h3>
                <button className='deletebutton button--round' onClick={() => {
-                 USER_comments.remove({_id: this.props.comment_prop_obj._id})
+                 USER_Comments_Access.remove({_id: this.props.comment_prop_obj._id})
                }}>X</button>
              </div>
              </div>
