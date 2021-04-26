@@ -25,7 +25,7 @@ export default class RenderPost extends React.Component{
 
             </div>
           </div>
-          <div className="likes">
+
             <button className='likebutton button--round' onClick={() => {  // anonymous arrow function
               USER_Posts_Access.update({_id: this.props.post_prop_obj._id},
                 {$inc: {likes: 1}})}}>Likes</button>
@@ -40,12 +40,13 @@ export default class RenderPost extends React.Component{
 
                 <p className='post__stats'>{this.props.post_prop_obj.dislikes}</p> {''/* single space before button hack */}
 
-                <AddComment />
-
             <button className='deletebutton button--round' onClick={() => {
               USER_Posts_Access.remove({_id: this.props.post_prop_obj._id})
             }}>X</button>
-            </div>
+
+            <AddComment />
+
+          
         </div>
       </>
     );
